@@ -21,8 +21,6 @@ const myCars = [
 const json2csvParser = new Parser({ fields });
 const csv = json2csvParser.parse(myCars);
 
-console.log(csv);
-
 fs.writeFile('file.csv', csv, function(err) {
     if (err) throw err;
     console.log('file saved');
